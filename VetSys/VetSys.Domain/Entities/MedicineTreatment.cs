@@ -6,7 +6,15 @@ using System.Threading.Tasks;
 
 namespace VetSys.Domain.Entities
 {
-    internal class MedicineTreatment
+    public class MedicineTreatment
     {
+        public int Id { get; set; }
+        public int MedicineId { get; set; }
+        public int TreatmentId { get; set; }
+        public virtual Medicine Medicine { get; set; }
+        public virtual Treatment Treatment { get; set; }
+
+       
+        
     }
 }

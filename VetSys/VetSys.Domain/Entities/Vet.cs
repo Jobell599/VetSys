@@ -6,7 +6,10 @@ using System.Threading.Tasks;
 
 namespace VetSys.Domain.Entities
 {
-    internal class Vet
+    public class Vet
     {
+        public int Id { get; set; }
+        public string Name { get; set; }
+
     }
 }
