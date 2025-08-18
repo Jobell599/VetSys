@@ -18,8 +18,4 @@
     <ProjectReference Include="..\VetSys.Application\VetSys.Application.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Controllers\" />
-  </ItemGroup>
-
 </Project>
