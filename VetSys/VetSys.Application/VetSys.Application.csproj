@@ -8,9 +8,7 @@
 
   <ItemGroup>
     <Folder Include="Contracts\" />
-    <Folder Include="Dtos\" />
     <Folder Include="MappingProfiles\" />
-    <Folder Include="Services\" />
   </ItemGroup>
 
   <ItemGroup>
@@ -19,6 +17,10 @@
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\VetSys.Infrastructure\VetSys.Infrastructure.csproj" />
   </ItemGroup>
 
 </Project>

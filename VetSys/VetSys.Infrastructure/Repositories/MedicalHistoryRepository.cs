@@ -22,7 +22,7 @@ namespace VetSys.Infrastructure.Repositories
         public async Task<MedicalHistory> AddMedicalHistoryAsync(MedicalHistory history)
         {
             await context.MedicalHistories.AddAsync(history);
-            await context.SaveChangesAsync();
+            
             return history;
         }
 
@@ -56,7 +56,7 @@ namespace VetSys.Infrastructure.Repositories
                 return false;
 
             context.MedicalHistories.Remove(history);
-            await context.SaveChangesAsync();
+            
             return true;
         }
     }

@@ -22,7 +22,6 @@ namespace VetSys.Infrastructure.Repositories
         public async Task<Animal> AddAnimalAsync(Animal animal)
         {
             await context.Animals.AddAsync(animal);
-            await context.SaveChangesAsync();
             return animal;
         }
 
@@ -45,7 +44,6 @@ namespace VetSys.Infrastructure.Repositories
             existingAnimal.CustomerId = animal.CustomerId;
 
             context.Animals.Update(existingAnimal);
-            await context.SaveChangesAsync();
             return existingAnimal;
         }
 
@@ -57,7 +55,6 @@ namespace VetSys.Infrastructure.Repositories
                 return false;
 
             context.Animals.Remove(animal);
-            await context.SaveChangesAsync();
             return true;
         }
 

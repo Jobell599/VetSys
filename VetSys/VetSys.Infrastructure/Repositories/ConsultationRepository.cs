@@ -22,7 +22,7 @@ namespace VetSys.Infrastructure.Repositories
         public async Task<Consultation> AddConsultationAsync(Consultation consultation)
         {
             await context.Consultations.AddAsync(consultation);
-            await context.SaveChangesAsync();
+            
             return consultation;
         }
 
@@ -44,7 +44,7 @@ namespace VetSys.Infrastructure.Repositories
             existing.VetId = consultation.VetId;
 
             context.Consultations.Update(existing);
-            await context.SaveChangesAsync();
+            
             return existing;
         }
 
@@ -56,7 +56,7 @@ namespace VetSys.Infrastructure.Repositories
                 return false;
 
             context.Consultations.Remove(consultation);
-            await context.SaveChangesAsync();
+            
             return true;
         }
 

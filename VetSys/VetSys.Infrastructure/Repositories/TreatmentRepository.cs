@@ -22,7 +22,7 @@ namespace VetSys.Infrastructure.Repositories
         public async Task<Treatment> AddTreatmentAsync(Treatment treatment)
         {
             await context.Treatments.AddAsync(treatment);
-            await context.SaveChangesAsync();
+            
             return treatment;
         }
 
@@ -43,7 +43,7 @@ namespace VetSys.Infrastructure.Repositories
             existingTreatment.MedicineTreatments = treatment.MedicineTreatments;
 
             context.Treatments.Update(existingTreatment);
-            await context.SaveChangesAsync();
+            
             return existingTreatment;
         }
 
@@ -55,7 +55,7 @@ namespace VetSys.Infrastructure.Repositories
                 return false;
 
             context.Treatments.Remove(treatment);
-            await context.SaveChangesAsync();
+            
             return true;
         }
 

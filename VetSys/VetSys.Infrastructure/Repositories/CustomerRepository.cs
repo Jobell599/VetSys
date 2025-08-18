@@ -22,7 +22,7 @@ namespace VetSys.Infrastructure.Repositories
         public async Task<Customer> AddCustomerAsync(Customer customer)
         {
             await context.Customers.AddAsync(customer);
-            await context.SaveChangesAsync();
+            
             return customer;
         }
 
@@ -42,7 +42,7 @@ namespace VetSys.Infrastructure.Repositories
             existingCustomer.Email = customer.Email;
 
             context.Customers.Update(existingCustomer);
-            await context.SaveChangesAsync();
+            
             return existingCustomer;
         }
 
@@ -54,7 +54,7 @@ namespace VetSys.Infrastructure.Repositories
                 return false;
 
             context.Customers.Remove(customer);
-            await context.SaveChangesAsync();
+            
             return true;
         }
 
