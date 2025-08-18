@@ -1,7 +1,9 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿
+using VetSys.Application.Dtos;
 using VetSys.Domain.Entities;
+using VetSys.Infrastructure.Repositories;
 
-namespace VetSys.Infrastructure.Repositories
+namespace VetSys.Application.Dtos
 {
     public class CustomerService
     {

@@ -1,6 +1,8 @@
-﻿using VetSys.Domain.Entities;
+﻿using VetSys.Application.Dtos;
+using VetSys.Infrastructure.Repositories;
+using VetSys.Domain.Entities;
 
-namespace VetSys.Infrastructure.Repositories
+namespace VetSys.Application.Dtos
 {
     public class VetService
     {

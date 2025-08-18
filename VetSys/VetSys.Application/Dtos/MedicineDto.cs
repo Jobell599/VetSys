@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace VetSys.Domain.Entities
+namespace VetSys.Application.Dtos
 {
     public class MedicineDto
     {

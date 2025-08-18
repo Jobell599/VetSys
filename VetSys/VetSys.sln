@@ -3,13 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.10.35122.118
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VetSys.API", "VetSys.API\VetSys.API.csproj", "{9560CED7-5824-4ED7-AD4B-6434B9F7773F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VetSys.Infrastructure", "VetSys.Infrastructure\VetSys.Infrastructure.csproj", "{9A67DC42-DA35-4D14-BEA0-82BA40C64791}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VetSys.Infrastructure", "VetSys.Infrastructure\VetSys.Infrastructure.csproj", "{9A67DC42-DA35-4D14-BEA0-82BA40C64791}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VetSys.Domain", "VetSys.Domain\VetSys.Domain.csproj", "{227C22CE-CC31-48E1-94C8-760615FD27C5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VetSys.Domain", "VetSys.Domain\VetSys.Domain.csproj", "{227C22CE-CC31-48E1-94C8-760615FD27C5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VetSys.Application", "VetSys.Application\VetSys.Application.csproj", "{47F32A00-3FA6-4C4A-8A35-F2F55A436F1C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VetSys.Application", "VetSys.Application\VetSys.Application.csproj", "{47F32A00-3FA6-4C4A-8A35-F2F55A436F1C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VetSys.API", "VetSys.API\VetSys.API.csproj", "{2C8D6370-5937-447D-8F65-6181E70E8566}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,10 +17,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{9560CED7-5824-4ED7-AD4B-6434B9F7773F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{9560CED7-5824-4ED7-AD4B-6434B9F7773F}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{9560CED7-5824-4ED7-AD4B-6434B9F7773F}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{9560CED7-5824-4ED7-AD4B-6434B9F7773F}.Release|Any CPU.Build.0 = Release|Any CPU
 		{9A67DC42-DA35-4D14-BEA0-82BA40C64791}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{9A67DC42-DA35-4D14-BEA0-82BA40C64791}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9A67DC42-DA35-4D14-BEA0-82BA40C64791}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -33,6 +29,10 @@ Global
 		{47F32A00-3FA6-4C4A-8A35-F2F55A436F1C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{47F32A00-3FA6-4C4A-8A35-F2F55A436F1C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{47F32A00-3FA6-4C4A-8A35-F2F55A436F1C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2C8D6370-5937-447D-8F65-6181E70E8566}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2C8D6370-5937-447D-8F65-6181E70E8566}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2C8D6370-5937-447D-8F65-6181E70E8566}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2C8D6370-5937-447D-8F65-6181E70E8566}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
