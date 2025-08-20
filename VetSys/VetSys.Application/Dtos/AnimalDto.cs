@@ -16,7 +16,8 @@ namespace VetSys.Application.Dtos
         public DateTime Birth {  get; set; }
         public int Weight { get; set; }
         public int CustomerId { get; set; }
-        public virtual CustomerDto Customer { get; set; }
+
+
 
     }
 }

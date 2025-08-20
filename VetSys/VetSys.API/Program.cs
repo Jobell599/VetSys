@@ -1,19 +1,15 @@
-using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.EntityFrameworkCore;
 using VetSys.Application.Dtos;
 using VetSys.Infrastructure.Data;
 using VetSys.Infrastructure.Repositories;
 
 var builder = WebApplication.CreateBuilder(args);
 
+// Configurar DbContext
 builder.Services.AddDbContext<VetSysApplicationContext>(o =>
     o.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
-
-builder.Services.AddControllers();
-// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
-builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen();
-
+// Agregar servicios de repositorios
 builder.Services.AddScoped<UnityOfWork>();
 builder.Services.AddScoped<AnimalRepository>();
 builder.Services.AddScoped<ConsultationRepository>();
@@ -24,6 +20,7 @@ builder.Services.AddScoped<MedicineTreatmentRepository>();
 builder.Services.AddScoped<TreatmentRepository>();
 builder.Services.AddScoped<VetRepository>();
 
+// Agregar servicios de aplicación
 builder.Services.AddScoped<AnimalService>();
 builder.Services.AddScoped<ConsultationService>();
 builder.Services.AddScoped<CustomerService>();
@@ -33,17 +30,27 @@ builder.Services.AddScoped<MedicineTreatmentService>();
 builder.Services.AddScoped<TreatmentService>();
 builder.Services.AddScoped<VetService>();
 
+// Habilitar CORS para tu frontend
 builder.Services.AddCors(options =>
 {
-    options.AddPolicy("AllowAllOrigins",
-        builder => builder.AllowAnyOrigin()
-                          .AllowAnyMethod()
-                          .AllowAnyHeader());
+    options.AddPolicy("AllowFrontend", policy =>
+    {
+        policy.WithOrigins("http://127.0.0.1:5500", "https://127.0.0.1:5500")
+              .AllowAnyHeader()
+              .AllowAnyMethod();
+    });
 });
+
+// Agregar controladores y Swagger
+builder.Services.AddControllers();
+builder.Services.AddEndpointsApiExplorer();
+builder.Services.AddSwaggerGen();
 
 var app = builder.Build();
 
-// Configure the HTTP request pipeline.
+// Middleware
+app.UseCors("AllowFrontend"); // ¡Debe ir antes de MapControllers!
+
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
@@ -51,10 +58,8 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
-
 app.UseAuthorization();
-
 app.MapControllers();
 
-app.UseCors("AllowAllOrigins");
 app.Run();
+

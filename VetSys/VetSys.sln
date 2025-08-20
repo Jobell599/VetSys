@@ -9,7 +9,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VetSys.Domain", "VetSys.Dom
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VetSys.Application", "VetSys.Application\VetSys.Application.csproj", "{47F32A00-3FA6-4C4A-8A35-F2F55A436F1C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VetSys.API", "VetSys.API\VetSys.API.csproj", "{2C8D6370-5937-447D-8F65-6181E70E8566}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VetSys.API", "VetSys.API\VetSys.API.csproj", "{2C8D6370-5937-447D-8F65-6181E70E8566}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

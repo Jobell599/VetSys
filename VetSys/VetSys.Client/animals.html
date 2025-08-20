@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>🐾 VetSys - Mascotas</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .btn {
+      display: inline-block;
+      margin: 10px 0;
+      padding: 10px 20px;
+      background: #4CAF50;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+    .btn:hover {
+      background: #45a049;
+    }
+  </style>
+</head>
+<body>
+  <!-- Botón volver al inicio -->
+  <a href="index.html" class="btn">⬅️ Volver al inicio</a>
+
+  <h1>🐾 Lista de Mascotas</h1>
+
+  <!-- Botón para ir a registrar nueva mascota -->
+  <a href="register-animal.html" class="btn">➕ Registrar nueva mascota</a>
+
+  <hr>
+
+  <!-- Tabla de mascotas -->
+  <table id="animalsTable">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Nombre</th>
+        <th>Especie</th>
+        <th>Raza</th>
+        <th>Sexo</th>
+        <th>Peso (kg)</th>
+        <th>ID dueño</th>
+        <th>Acciones</th>
+      </tr>
+    </thead>
+    <tbody id="animalsList">
+      <!-- Aquí se cargarán las mascotas -->
+    </tbody>
+  </table>
+
+  <script src="script.js"></script>
+</body>
+</html>

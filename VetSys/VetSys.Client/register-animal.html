@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>🐾 Registrar Mascota</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .btn {
+      display: inline-block;
+      margin: 10px 0;
+      padding: 10px 20px;
+      background: #4CAF50;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+    .btn:hover {
+      background: #45a049;
+    }
+  </style>
+</head>
+<body>
+  <!-- Botón para regresar a lista -->
+  <a href="animals.html" class="btn">⬅️ Volver a lista de mascotas</a>
+
+  <h1>➕ Registrar nueva mascota</h1>
+
+  <div class="form-container">
+    <form id="animalForm">
+      <input type="text" id="name" placeholder="Nombre" required>
+      <input type="text" id="kind" placeholder="Especie (Perro, Gato...)" required>
+      <input type="text" id="race" placeholder="Raza">
+      <input type="text" id="sex" placeholder="Sexo (Macho/Hembra)" required>
+      <input type="date" id="birth" required>
+      <input type="number" id="weight" placeholder="Peso (kg)" required>
+      <input type="number" id="customerId" placeholder="ID del dueño" required>
+      <input type="hidden" id="animalId">
+      <button type="submit" id="submitBtn">Registrar</button>
+    </form>
+  </div>
+
+  <script>
+    document.getElementById("animalForm").addEventListener("submit", function(e) {
+        e.preventDefault();
+
+        // Obtener datos del formulario
+        const animal = {
+        id: Date.now(), // ID único por ahora
+        name: document.getElementById("name").value,
+        kind: document.getElementById("kind").value,
+        race: document.getElementById("race").value,
+        sex: document.getElementById("sex").value,
+        birth: document.getElementById("birth").value,
+        weight: document.getElementById("weight").value,
+        customerId: document.getElementById("customerId").value
+        };
+
+        // Recuperar lista de animales desde localStorage
+        let animals = JSON.parse(localStorage.getItem("animals")) || [];
+        animals.push(animal);
+
+        // Guardar de nuevo
+        localStorage.setItem("animals", JSON.stringify(animals));
+
+        alert("✅ Mascota registrada con éxito");
+        window.location.href = "animals.html"; // volver a la lista
+    });
+    </script>
+
+</body>
+</html>
